@@ -1,0 +1,63 @@
+#TEXT_ALIGN_CENTER,
+header, div {
+	text-align: center;
+}
+
+#MARGIN_AUTO,
+header, div, .wrapper {
+	margin: auto;
+}
+
+#FONT_NANUMGOTHIC,
+header, body {
+	font-family: 'NanumGothic';
+}
+
+.divider {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.wrapper {
+	width: 90%;
+	height: 100%;
+}
+
+body {
+	background-color: #ebebeb;
+}
+
+header {
+	border-bottom: 1px solid #3d3d3d;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+	background-color: #cacaca;
+	min-width: 450px;
+}
+
+div img {
+	border: 2px dotted black;
+	height: 90;
+	width: 90%;
+	max-height: 400px;
+	max-width: 400px;
+	min-height: 300px;
+	min-width: 300px;
+	border-radius: 10px;
+}
+
+.wrapper div {
+	margin-bottom: 50px;
+	width: 430px;
+	height: 430px;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.wrapper div:hover {
+	background-color: #ff8888
+}

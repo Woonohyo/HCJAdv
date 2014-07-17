@@ -1,7 +1,6 @@
 var myObj = {
 	strTexts: " 정말 몸에 좋을까..요?",
 	registerEvents: function(e) {
-		console.log(e.target.parentNode.id);
 		var yasikName = e.target.parentNode.id;
 		switch(yasikName) {
 			case "chickenAndBeer":

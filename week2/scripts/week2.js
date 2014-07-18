@@ -1,25 +1,15 @@
+var yasikDict = {"chickenAndBeer":"치맥은", "pajeonAndMakgeolli":"파전에 막걸리는", "tripeAndSoju":"곱창에 쏘주는"};
+
 var myObj = {
 	strTexts: " 정말 몸에 좋을까..요?",
-	registerEvents: function(e) {
-		var yasikName = e.target.parentNode.id;
-		switch(yasikName) {
-			case "chickenAndBeer":
-				console.log("치맥은" + this.strTexts);
-				break;
-			case "pajeonAndMakgeolli":
-				console.log("파전에 막걸리는" + this.strTexts);
-				break;
-			case "tripeAndSoju":
-				console.log("곱창에 쏘주는" + this.strTexts);
-				break;
-		}
+	registerEvents: function(event) {
+		var yasikName = event.target.parentNode.id;
+		console.log(yasikDict[yasikName] + this.strTexts);
 	}
 }
 
 var yasik = document.querySelectorAll(".wrapper div");
 
 for (var i = 0; i < yasik.length; i++) { 
-	yasik[i].onclick = function(event) {
-		myObj.registerEvents(event);
-	}
+	yasik[i].addEventListener("click", myObj.registerEvents.bind(myObj), false);
 }

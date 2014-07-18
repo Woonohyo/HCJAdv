@@ -13,7 +13,7 @@ var myObj = {
 var yasik = document.querySelectorAll(".wrapper div");
 
 // bind를 통해 registerEvents 함수의 this는 myObj가 됩니다.
-// 만약 bind를 하지 않으면 registerEvents의 this == window가 되기 때문에 this.strTexts에 접근을 못하기 때문입니다.
+// 만약 bind를 하지 않으면 registerEvents의 this == "클릭한 엘리먼트"가 되기 때문에 this.strTexts를 사용하지 못하기 때문입니다.
 for (var i = 0; i < yasik.length; i++) { 
 	yasik[i].addEventListener("click", myObj.registerEvents.bind(myObj), false);
 }

@@ -14,6 +14,7 @@ var yasik = document.querySelectorAll(".wrapper div");
 
 // bind를 통해 registerEvents 함수의 this는 myObj가 됩니다.
 // 만약 bind를 하지 않으면 registerEvents의 this == "클릭한 엘리먼트"가 되기 때문에 this.strTexts를 사용하지 못하기 때문입니다.
+// 아래 for문을 registerEvents함수 안에 구현할 수도 있겠죠? 그때도 동일한 문제가 생길 것이고 역시 BIND로 해결할 수 있습니다. 
 for (var i = 0; i < yasik.length; i++) { 
 	yasik[i].addEventListener("click", myObj.registerEvents.bind(myObj), false);
 }
